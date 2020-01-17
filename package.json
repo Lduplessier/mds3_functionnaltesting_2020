@@ -1,0 +1,46 @@
+{
+  "name": "mds3_functionnaltesting_2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch",
+    "ie": "nightwatch -e ie11",
+    "sauce": "nightwatch -e chrome,ie11,android_s4_emulator,iphone_6_simulator",
+    "upload": "node test/e2e/upload_screenshots_to_s3.js",
+    "e2e": "npm run sauce; npm run upload",
+    "dev": "nodemon -w test/index.html --delay 250ms --exec 'npm run upload'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lduplessier/mds3_functionnaltesting_2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lduplessier/mds3_functionnaltesting_2020/issues"
+  },
+  "homepage": "https://github.com/Lduplessier/mds3_functionnaltesting_2020#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "aws-sdk": "^2.7.13",
+    "chromedriver": "^2.33.2",
+    "env2": "^2.1.1",
+    "mime-types": "^2.1.13",
+    "nodemon": "^1.11.0",
+    "selenium-server": "^3.8.1"
+  },
+  "keywords": [
+    "nightwatch",
+    "testing",
+    "front-end",
+    "UI",
+    "browser",
+    "test",
+    "testing",
+    "step-by-step tutorial",
+    "how to",
+    "User Acceptance Testing",
+    "UAT"
+  ]
+}
